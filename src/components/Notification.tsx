@@ -4,23 +4,22 @@
  * @copyright Copyright (c) 2019 Power Kernel
  */
 
-import React from 'react';
-
+import React from "react";
 
 interface NotificationProps {
-    notification: {message: string; type: string}
+  notification: { message: string; type: string };
 }
 
-const Notification: React.FC<NotificationProps> = ({notification}:{notification: {message: string; type: string}}) => {
-    if (notification.message === '') {
-        return null
-    }
+const Notification: React.FC<NotificationProps> = ({
+  notification
+}: {
+  notification: { message: string; type: string };
+}) => {
+  if (notification.message === "") {
+    return null;
+  }
 
-    return (
-        <div className={notification.type}>
-            {notification.message}
-        </div>
-    )
+  return <div className={notification.type}>{notification.message}</div>;
 };
 
 export default Notification;

@@ -4,29 +4,43 @@
  * @copyright Copyright (c) 2019 Power Kernel
  */
 
-import React from 'react';
+import React from "react";
 
 import IBlog from "./../interfaces/Blog";
 
 import Blog from "./Blog";
 
 interface BlogsProps {
-    blogs: IBlog[]
+  blogs: IBlog[];
+  likeHandler: (blog: IBlog) => void;
+  deleteHandler: (id: string) => void;
 }
 
-const Blogs: React.FC<BlogsProps> = ({blogs}: BlogsProps) => {
-    return (
-        <div>
-            <h2>Latest blogs</h2>
-            <ul>
-            {
-                blogs.map(blog=>
-                    <Blog key={blog.id} blog={blog} />
-                )
-            }
-            </ul>
-        </div>
-    );
+const Blogs: React.FC<BlogsProps> = ({
+  blogs,
+  likeHandler,
+  deleteHandler
+}: BlogsProps) => {
+  const sortedBlog = [...blogs];
+  sortedBlog.sort(function(a, b) {
+    return b.likes - a.likes;
+  });
+
+  return (
+    <div>
+      <h2>Latest blogs</h2>
+      <ul>
+        {sortedBlog.map(blog => (
+          <Blog
+            key={blog.id}
+            blog={blog}
+            likeHandler={likeHandler}
+            deleteHandler={deleteHandler}
+          />
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default Blogs;

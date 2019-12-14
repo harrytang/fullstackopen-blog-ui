@@ -10,4 +10,4 @@ export default interface Blog {
     author: string;
     url: string;
     likes: number;
-}
+};

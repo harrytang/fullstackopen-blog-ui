@@ -3,12 +3,11 @@
  * @link https://powerkernel.com
  * @copyright Copyright (c) 2019 Power Kernel
  */
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 
 interface LoginProps {
-    loginHandler: (username: string, password: string) => void;
+  loginHandler: (username: string, password: string) => void;
 }
-
 
 const Login: React.FC<LoginProps> = ({ loginHandler }: LoginProps) => {
   const usernameInputRef = useRef<HTMLInputElement>(null);
@@ -26,13 +25,25 @@ const Login: React.FC<LoginProps> = ({ loginHandler }: LoginProps) => {
       <h2>Login</h2>
       <div>
         <label htmlFor="username">Username</label>
-        <input type="text" id="username" placeholder="username" ref={usernameInputRef} />
+        <input
+          type="text"
+          id="username"
+          placeholder="username"
+          ref={usernameInputRef}
+        />
       </div>
       <div>
         <label htmlFor="password">Password</label>
-        <input type="password" id="password" placeholder="password" ref={passwordInputRef} />
+        <input
+          type="password"
+          id="password"
+          placeholder="password"
+          ref={passwordInputRef}
+        />
       </div>
-      <div><button type="submit">Login</button></div>
+      <div>
+        <button type="submit">Login</button>
+      </div>
     </form>
   );
 };
