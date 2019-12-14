@@ -34,7 +34,7 @@ const Blog: React.FC<BlogProps> = ({
         <span onClick={toggleVisibility}>{blog.title}</span>
       </h3>
 
-      <div style={showWhenVisible}>
+      <div className="blog-info" style={showWhenVisible}>
         <div>Author: {blog.author}</div>
         <div>Url: {blog.url}</div>
         <div>
