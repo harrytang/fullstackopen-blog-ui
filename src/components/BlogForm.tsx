@@ -47,6 +47,7 @@ const BlogForm: React.FC<BlogFormProps> = ({
       </div>
       <div>
         <button type="submit">Create</button>
+        <button type="reset">Reset</button>
       </div>
     </form>
   );

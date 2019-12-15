@@ -29,7 +29,7 @@ const Blogs: React.FC<BlogsProps> = ({
   return (
     <div>
       <h2>Latest blogs</h2>
-      <ul>
+      <ul className="blog-list">
         {sortedBlog.map(blog => (
           <Blog
             key={blog.id}

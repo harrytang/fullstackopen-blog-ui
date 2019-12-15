@@ -2,12 +2,11 @@
  * @Author: Harry Tang - harry@powerkernel.com
  * @Date: 2019-12-14 23:24:35
  * @Last Modified by: Harry Tang - harry@powerkernel.com
- * @Last Modified time: 2019-12-15 00:04:53
+ * @Last Modified time: 2019-12-15 21:10:19
  */
 
 import React from "react";
 import { render, fireEvent, RenderResult } from "@testing-library/react";
-import { prettyDOM } from "@testing-library/dom";
 import Blog from "./Blog";
 
 describe("<Blog />", () => {

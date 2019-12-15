@@ -22,7 +22,7 @@ const Login: React.FC<LoginProps> = ({ loginHandler }: LoginProps) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <h2>Login</h2>
+      <h2 className="login-title">Login</h2>
       <div>
         <label htmlFor="username">Username</label>
         <input
